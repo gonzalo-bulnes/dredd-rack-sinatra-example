@@ -12,3 +12,16 @@ Usage
 # run the app
 rackup -p 4567
 ```
+
+Documentation
+-------------
+
+See the [Dredd::Rack Sinatra Example API blueprint](app.apib.md) for an always up-to-date API documentation.
+
+Development
+-----------
+
+```bash
+# run the app
+rerun 'rackup --port=4567'
+º```
