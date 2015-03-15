@@ -10,7 +10,15 @@ Usage
 
 ```bash
 # run the app
-rackup -p 4567
+rackup --port=4567
+```
+
+Development
+-----------
+
+```bash
+# run the app
+rerun 'rackup --port=4567'
 ```
 
 Documentation
