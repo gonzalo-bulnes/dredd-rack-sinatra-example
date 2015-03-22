@@ -90,9 +90,28 @@ def run_server
           process_message message, client
         end
       end
+      ensure_the_ruby_process_gets_killed!
     end
+    STDERR.puts 'Closing socket...'
     client.close
   end
+end
+
+# Does actually ensure that the Ruby process gets killed
+#
+# I noticed that the Ruby process didn't get killed. As a
+# consequence, it was impossible to successfully run the rake task
+# twice. ("successfully" means: "Yay! Failed in ruby hook.")
+#
+# Do notice that the 'Closing socket...' message never gets printed.
+#
+# Printing 'anything' does in fact ensure the Ruby process gets killed,
+# even if it does not provoke the 'Closing socket...' print.
+# My understanding of sockets is insufficient to explain this result,
+# but that's what I've observed.
+#
+def ensure_the_ruby_process_gets_killed!
+  STDERR.puts 'anything' if buffer.empty?
 end
 
 #
