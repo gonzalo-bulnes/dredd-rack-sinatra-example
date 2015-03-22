@@ -9,7 +9,7 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    dredd-rack (0.3.0)
+    dredd-rack (0.4.0)
       capybara (~> 2.4)
       rainbow (~> 2.0)
       rake (~> 10.4)
@@ -49,6 +49,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dredd-rack (= 0.3.0)
+  dredd-rack (= 0.4.0)
   rerun (= 0.10.0)
   sinatra (~> 1.0)
