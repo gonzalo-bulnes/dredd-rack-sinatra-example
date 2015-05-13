@@ -36,7 +36,7 @@ Example:
 ```ruby
 # Gemfile
 
-gem 'dredd-rack', '0.3.0'
+gem 'dredd-rack', '0.5.0'
 ```
 
 ```ruby
@@ -52,8 +52,6 @@ Dredd::Rack::RakeTask.new # run with `rake dredd`
 # Optinally, add :dredd to the default task
 task default: :dredd # run with `rake`
 ```
-
-  [add-0.3.0]: https://github.com/gonzalo-bulnes/dredd-rack-sinatra-example/commit/c1ea47262aed38d12168fb86ba0932059b9f66ee
 
 That's all!
 
